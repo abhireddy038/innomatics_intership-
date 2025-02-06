@@ -1,0 +1,9 @@
+body {
+    background-image: url('d:\coll\intership\innomatics_intership\coffee\A2\coffee\CF2.jpg'); /* Update with your image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Sets the height to full viewport height */
+    margin: 0; /* Removes default margin */
+    color: white; /* Optional: Change text color for better visibility */
+}

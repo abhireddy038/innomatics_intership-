@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget 5585 Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Personal Budget Tracker</h1>
+    <nav>
+        <a href="#add-expense">Add Expense</a> | 
+        <a href="#view-budget">View Budget</a>
+    </nav>
+</header>
+
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>This Personal Budget Tracker helps you manage your monthly expenses by allowing you to input your income and expenses, categorize them, and view a summary of your financial situation.</p>
+</section>
+
+<section id="add-expense">
+    <h2>Add Income/Expense</h2>
+    <form>
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" placeholder="Enter your income" required><br><br>
+
+        <label for="expense">Expense:</label>
+        <input type="number" id="expense" name="expense" placeholder="Enter your expense" required><br><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="Food">Food</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="view-budget">
+    <h2>Budget Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>data type </th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example data, this would be dynamically generated -->
+            <tr>
+                <td>Food</td>
+                <td>200</td>
+                <td>2023-10-01</td>
+                <td>Expense</td>
+                <td> <output></output> </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>3000</td>
+                <td>2023-10-01</td>
+                <td>Income</td>
+                <td> out </td>
+            </tr
+            <tr>
+                <td>Transportation</td>
+                <td>6000</td>
+                <td>2023-10-01</td>
+                <td>expense</td>
+                <td> <time datetime=""></time></td>
+            </tr>>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>2023-10-01</td>
+                <td>Expense</td>
+                <td> out </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>Personal Budget Tracker - Version 1.0</p>
+
+</footer>
+
+</body>
+</html>
