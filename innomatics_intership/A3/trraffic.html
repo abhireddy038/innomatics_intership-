@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Light System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Smart Traffic Light System</h1>
+    
+    <label for="trafficDensity">Select Traffic Density:</label>
+    <select id="trafficDensity">
+        <option value="Heavy">Heavy Traffic</option>
+        <option value="Moderate">Moderate Traffic</option>
+        <option value="Light">Light Traffic</option>
+    </select>
+    
+    <button onclick="trafficLightControl()">Get Green Signal Duration</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function trafficLightControl() {
+        const density = document.getElementById('trafficDensity').value;
+        let greenSignalDuration;
+
+        // Determine green signal duration based on traffic density
+        switch (density) {
+            case "Heavy":
+                greenSignalDuration = 60; // 60 seconds for heavy traffic
+                break;
+            case "Moderate":
+                greenSignalDuration = 40; // 40 seconds for moderate traffic
+                break;
+            case "Light":
+                greenSignalDuration = 20; // 20 seconds for light traffic
+                break;
+            default:
+                greenSignalDuration = 0; // Default case
+        }
+
+        // Display the result
+        document.getElementById('result').innerText = `Green Signal Duration: ${greenSignalDuration} seconds`;
+    }
+</script>
+
+</body>
+</html>
